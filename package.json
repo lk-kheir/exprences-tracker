@@ -1,0 +1,32 @@
+{
+  "name": "exprences-tracker",
+  "version": "1.0.0",
+  "description": "exprences tracker application with Svelte in the front and nodeJs express in the backend",
+  "main": "server.js",
+  "scripts": {
+    "client": "npm run dev --prefix client",
+    "server": "nodemon server.js --ignore 'client/'",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/louzanizineddine/exprences-tracker.git"
+  },
+  "author": "louzani zineddine",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/louzanizineddine/exprences-tracker/issues"
+  },
+  "homepage": "https://github.com/louzanizineddine/exprences-tracker#readme",
+  "dependencies": {
+    "body-parser": "^1.20.0",
+    "concurrently": "^7.2.2",
+    "cors": "^2.8.5",
+    "express": "^4.18.1",
+    "mongoose": "^6.4.4",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  }
+}
