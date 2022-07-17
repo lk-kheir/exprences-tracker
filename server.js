@@ -22,6 +22,7 @@ mongoose
 app.use('/api/transactions', transactionsRoutes)
 
 if (process.env.NODE_ENV === 'production') {
+    require('dotenv').config();
     app.use(express.static('client/public'))
     app.get('*' , (req , res) => {
         res.sendFile(path.resolve(__dirname , 'client', 'public' , 'index.html'))
